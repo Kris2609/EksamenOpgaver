@@ -1,0 +1,6 @@
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\bin\Debug\OpgaverTilEksamen.exe.config
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\bin\Debug\OpgaverTilEksamen.exe
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\bin\Debug\OpgaverTilEksamen.pdb
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\obj\Debug\OpgaverTilEksamen.csprojAssemblyReference.cache
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\obj\Debug\OpgaverTilEksamen.exe
+C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\OpgaverTilEksamen\obj\Debug\OpgaverTilEksamen.pdb
