@@ -10,6 +10,7 @@ namespace SingleTon
     {
         static void Main(string[] args)
         {
+            Player.Instance.Print();
         }
     }
 }
