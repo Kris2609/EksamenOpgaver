@@ -10,6 +10,7 @@ namespace ObjectPool
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
