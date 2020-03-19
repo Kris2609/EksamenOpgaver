@@ -3,3 +3,8 @@ C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\QuickSort\
 C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\QuickSort\bin\Debug\QuickSort.pdb
 C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\QuickSort\obj\Debug\QuickSort.exe
 C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\QuickSort\obj\Debug\QuickSort.pdb
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\bin\Debug\QuickSort.exe.config
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\bin\Debug\QuickSort.exe
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\bin\Debug\QuickSort.pdb
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.exe
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.pdb
