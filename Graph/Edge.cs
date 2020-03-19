@@ -7,21 +7,19 @@ using System.Threading.Tasks;
 
 namespace Graphh
 {
-    class Edge<T>
+    public class Edge<T>
     {
-        Node<T> noteFrom;
-        Node<T> noteTo;
-        Node<T> noteBack;
-        public Edge(Node<T> noteFrom, Node<T> noteTo, Node<T> noteBack)
+        public Node<T> Start { get; private set; }
+        public Node<T> End { get; private set; }
+        public Edge(Node<T> start, Node<T> end)
         {
-            this.noteFrom = noteFrom;
-            this.noteTo = noteTo;
-            this.noteBack = noteBack;
+            Start = start;
+            End = end;
         }
 
         public override string ToString()
         {
-            return $"From {noteFrom.city} To {noteTo.city} and {noteBack.city} ";
+            return $"From {Start.Value.ToString()} To {End.Value.ToString()}";
         }
 
     }

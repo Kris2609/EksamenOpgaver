@@ -9,29 +9,36 @@ namespace Graph
 {
     public class Node<T>
     {
-        List<Edge<T>> edges = new List<Edge<T>>();
-        public T city;
-        public T value;
-        public Node(T city, T gold)
-        {
-            this.city = city;
-            this.value = gold;
-        }
-        public void AddToEdges(Node<T> noteTo, Node<T> noteFrom)
-        {
-            Edge<T> e = new Edge<T>(this,noteTo, noteFrom);
+        public T Value { get; private set; }
 
-            edges.Add(e);
+        public List<Edge<T>> Edges { get; private set; } = new List<Edge<T>>();
+        
+        public Node(T value) { Value = value; }
+
+        public void AddEdge(Node<T> end, bool addReturn = true)
+        {
+            Edges.Add(new Edge<T>(this, end));
+            if (addReturn)
+            {
+                end.AddEdge(this, false);
+            }
         }
+
+        public void RemoveEdge(Node<T> end)
+        {
+            foreach (var edge in Edges)
+            {
+                if (edge.End == end)
+                {
+                    Edges.Remove(edge);
+                    return;
+                }
+            }
+        }
+        
         public override string ToString()
         {
-            string sedges = "";
-            foreach (var item in edges)
-            {
-                sedges += item.ToString();
-            }
-            sedges += $" Ticket {value} Dkk";
-            return sedges;
+            return $"Node: {Value.ToString()}";
         }
     }
 }
