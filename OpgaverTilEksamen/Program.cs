@@ -15,7 +15,8 @@ namespace OpgaverTilEksamen
 
             for (int i = 0; i < 2; i++)
             {
-                new Thread(() => new SampleTask(,10).RaceCondition(so)).Start();
+                new Thread(() => new SampleTask().DeadLock1()).Start();
+                new Thread(() => new SampleTask().DeadLock2()).Start();
             }
             Console.ReadLine();
         }

@@ -19,7 +19,7 @@ namespace OpgaverTilEksamen
 
                 Trace.Assert(state == 6, $"Race condition occured after {+loop} loops ");
             }
-            state = 5;
+            state = 6;
         }
     }
 }
