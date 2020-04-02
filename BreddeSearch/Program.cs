@@ -73,7 +73,7 @@ namespace BreddeSearch
 
         static void Search<T>(Graph<T> graph, ref List<Node<T>> path, Node<T> start, Node<T> end)
         {
-            Queue<Edge<T>> edgesToVisit = new Queue<Edge<T>>();
+            Queue<Ed ge<T>> edgesToVisit = new Queue<Edge<T>>();
             Dictionary<Node<T>, Node<T>> parentPairs = new Dictionary<Node<T>, Node<T>>();
 
             edgesToVisit.Enqueue(new Edge<T>(start, start));
