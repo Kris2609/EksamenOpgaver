@@ -10,7 +10,9 @@ namespace Factory
     {
         public override Car CreateCar()
         {
+            Console.WriteLine("BulletProff Glass and MailBox Red");
             return new Toyota();
+            
         }
 
     }

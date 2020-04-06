@@ -10,6 +10,7 @@ namespace Factory
     {
         public override Car CreateCar()
         {
+            Console.WriteLine("BMW 400 HP and 4 wheels");
             return new BMW();
         }
     }
