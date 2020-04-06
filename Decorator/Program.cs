@@ -8,11 +8,9 @@ namespace Decorator
 {
     class Program
     {
-        private static int armyCount = 0;
         static void Main(string[] args)
         {
-            
-            while (armyCount < 5)
+            while (true)
             {
                 IUnit Firefighter = new Dps();
                 IUnit Tanky = new Tank();
@@ -23,21 +21,29 @@ namespace Decorator
                 Print(Firefighter);
                 Firefighter = new ArmorUpgrade(Firefighter);
                 Print(Firefighter);
+                Firefighter = new ArmorUpgrade(Firefighter);
+                Print(Firefighter);
+                Console.ReadLine();
+                Console.Clear();
+                Print(Tanky);
+                Tanky = new WeaponUpgrade(Tanky);
+                Print(Tanky);
                 Tanky = new WeaponUpgrade(Tanky);
                 Print(Tanky);
                 Tanky = new ArmorUpgrade(Tanky);
                 Print(Tanky);
                 Tanky = new ArmorUpgrade(Tanky);
                 Print(Tanky);
-                armyCount++;
+                Console.ReadLine();
+                Console.Clear();
             }
         }
 
         private static void Print(IUnit unit)
         {
             Console.WriteLine("-----------------");
-            Console.WriteLine("Damage: " + unit.GetDamage());
-            Console.WriteLine("Armor: " + unit.GetArmor());
+            Console.WriteLine($"Damage: {unit.GetDamage()}");
+            Console.WriteLine($"Armor:  {unit.GetArmor()}");
         }
     }
 }

@@ -15,12 +15,12 @@ namespace Decorator
             this.iUnite = unit;
         }
 
-        public int GetArmor()
+        public virtual int GetArmor()
         {
             return iUnite.GetArmor();
         }
 
-        public int GetDamage()
+        public virtual int GetDamage()
         {
             return iUnite.GetDamage();
         }

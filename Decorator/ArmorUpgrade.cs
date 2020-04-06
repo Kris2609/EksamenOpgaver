@@ -12,9 +12,9 @@ namespace Decorator
         {
 
         }
-public int GetArmor()
+        public override int GetArmor()
         {
-            return base.GetArmor() + 5;
+            return base.GetArmor() + 1;
         }
 
         

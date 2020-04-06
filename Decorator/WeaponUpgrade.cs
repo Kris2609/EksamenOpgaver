@@ -12,9 +12,9 @@ namespace Decorator
         {
 
         }
-        public int GetDamage()
+        public override int GetDamage()
         {
-            return base.GetDamage() + 5;
+            return base.GetDamage() + 1;
         }
     }
 }
