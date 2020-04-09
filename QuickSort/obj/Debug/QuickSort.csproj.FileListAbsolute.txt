@@ -8,3 +8,5 @@ C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\bin\Debug\QuickSor
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\bin\Debug\QuickSort.pdb
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.exe
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.pdb
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\QuickSort\obj\Debug\QuickSort.csproj.CoreCompileInputs.cache

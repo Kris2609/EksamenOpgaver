@@ -9,3 +9,4 @@ C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\InsertionSort\bin\Debug\Inse
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\InsertionSort\obj\Debug\InsertionSort.csprojAssemblyReference.cache
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\InsertionSort\obj\Debug\InsertionSort.exe
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\InsertionSort\obj\Debug\InsertionSort.pdb
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\InsertionSort\obj\Debug\InsertionSort.csproj.CoreCompileInputs.cache
