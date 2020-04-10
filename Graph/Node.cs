@@ -11,9 +11,11 @@ namespace Graph
     {
         public T Value { get; private set; }
 
+        public T Gold { get; private set; }
+
         public List<Edge<T>> Edges { get; private set; } = new List<Edge<T>>();
         
-        public Node(T value) { Value = value; }
+        public Node(T value, T gold) { Value = value; Gold = gold; }
 
         public void AddEdge(Node<T> end, bool addReturn = true)
         {
@@ -38,7 +40,7 @@ namespace Graph
         
         public override string ToString()
         {
-            return $"Node: {Value.ToString()}";
+            return $"Node: {Value.ToString()}, {Gold.ToString()}g";
         }
     }
 }
