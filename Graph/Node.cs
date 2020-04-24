@@ -15,7 +15,7 @@ namespace Graph
 
         public List<Edge<T>> Edges { get; private set; } = new List<Edge<T>>();
         
-        public Node(T value, T gold) { Value = value; Gold = gold; }
+        public Node(T value, T gold) { Value = value; Gold = gold;}
 
         public void AddEdge(Node<T> end, bool addReturn = true)
         {

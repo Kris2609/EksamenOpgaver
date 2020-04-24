@@ -11,6 +11,8 @@ namespace Graphh
     {
         public Node<T> Start { get; private set; }
         public Node<T> End { get; private set; }
+        
+
         public Edge(Node<T> start, Node<T> end)
         {
             Start = start;

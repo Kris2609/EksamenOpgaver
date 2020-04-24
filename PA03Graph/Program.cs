@@ -16,14 +16,14 @@ namespace PA03Graph
             
             Graph<string> graph = new Graph<string>();
             
-            Node<string> entrance = graph.AddNode(new Node<string>("Århus","0"));
-            Node<string> Aalborg = graph.AddNode(new Node<string>("Aalborg", "5"));
-            Node<string> Frederikshavn = graph.AddNode(new Node<string>("Frederikshavn", "20"));
-            Node<string> SjOdde = graph.AddNode(new Node<string>("Sj. Odde","50"));
-            Node<string> Fredericia = graph.AddNode(new Node<string>("Fredericia", "1"));
-            Node<string> Cph = graph.AddNode(new Node<string>("København","30"));
-            Node<string> Ronne = graph.AddNode(new Node<string>("Rønne", "2"));
-            Node<string> Odense = graph.AddNode(new Node<string>("Odense","9"));
+            Node<string> entrance = graph.AddNode(new Node<string>("Århus",""));
+            Node<string> Aalborg = graph.AddNode(new Node<string>("Aalborg", ""));
+            Node<string> Frederikshavn = graph.AddNode(new Node<string>("Frederikshavn", ""));
+            Node<string> SjOdde = graph.AddNode(new Node<string>("Sj. Odde",""));
+            Node<string> Fredericia = graph.AddNode(new Node<string>("Fredericia", ""));
+            Node<string> Cph = graph.AddNode(new Node<string>("København",""));
+            Node<string> Ronne = graph.AddNode(new Node<string>("Rønne", ""));
+            Node<string> Odense = graph.AddNode(new Node<string>("Odense",""));
           
 
             graph.AddEdge(entrance, Frederikshavn);

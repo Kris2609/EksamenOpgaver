@@ -16,20 +16,20 @@ namespace BreddeSearch
             
             Graph<string> graph = new Graph<string>();
 
-            Node<string> entrance = graph.AddNode(new Node<string>("Entrance"));
-            Node<string> iceblaster = graph.AddNode(new Node<string>("Ice Blaster"));
-            Node<string> slotmachine = graph.AddNode(new Node<string>("Slot Machines"));
-            Node<string> funhouse = graph.AddNode(new Node<string>("Funhouse"));
-            Node<string> rocketships = graph.AddNode(new Node<string>("Rocket Ships"));
-            Node<string> cinema = graph.AddNode(new Node<string>("3D Cinema"));
-            Node<string> pirateship = graph.AddNode(new Node<string>("Pirate Ship"));
-            Node<string> hotdogs = graph.AddNode(new Node<string>("Hotdogs"));
-            Node<string> logflume = graph.AddNode(new Node<string>("Log Flume"));
-            Node<string> bigdipper = graph.AddNode(new Node<string>("Big Dipper"));
-            Node<string> ghosttrain = graph.AddNode(new Node<string>("Ghost Train"));
-            Node<string> rollercoaster = graph.AddNode(new Node<string>("Rollercoaster"));
-            Node<string> carousel = graph.AddNode(new Node<string>("Carousel"));
-            Node<string> flyingchairs = graph.AddNode(new Node<string>("Flying Chairs"));
+            Node<string> entrance = graph.AddNode(new Node<string>("Entrance",""));
+            Node<string> iceblaster = graph.AddNode(new Node<string>("Ice Blaster", "20"));
+            Node<string> slotmachine = graph.AddNode(new Node<string>("Slot Machines", "20"));
+            Node<string> funhouse = graph.AddNode(new Node<string>("Funhouse", "20"));
+            Node<string> rocketships = graph.AddNode(new Node<string>("Rocket Ships", "20"));
+            Node<string> cinema = graph.AddNode(new Node<string>("3D Cinema", "20"));
+            Node<string> pirateship = graph.AddNode(new Node<string>("Pirate Ship", "20"));
+            Node<string> hotdogs = graph.AddNode(new Node<string>("Hotdogs", "20"));
+            Node<string> logflume = graph.AddNode(new Node<string>("Log Flume", "20"));
+            Node<string> bigdipper = graph.AddNode(new Node<string>("Big Dipper", "20"));
+            Node<string> ghosttrain = graph.AddNode(new Node<string>("Ghost Train", "20"));
+            Node<string> rollercoaster = graph.AddNode(new Node<string>("Rollercoaster", "20"));
+            Node<string> carousel = graph.AddNode(new Node<string>("Carousel", "20"));
+            Node<string> flyingchairs = graph.AddNode(new Node<string>("Flying Chairs", "20"));
 
             graph.AddEdge(entrance, slotmachine);
             graph.AddEdge(entrance, iceblaster);
