@@ -89,7 +89,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP6- DesignPatterns", "OOP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pa04 Algoritme", "Pa04 Algoritme\Pa04 Algoritme.csproj", "{8DC265D0-53B7-4399-A17E-3A6C63784120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerToClient", "ServerToClient\ServerToClient.csproj", "{3B65F906-B967-4867-9F69-D836CEF8D56E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerToClient", "ServerToClient\ServerToClient.csproj", "{3B65F906-B967-4867-9F69-D836CEF8D56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderinFromClientToServer", "OrderinFromClientToServer\OrderinFromClientToServer.csproj", "{BC34CAC0-851E-4388-8CBB-B5733A3E5A38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{3B65F906-B967-4867-9F69-D836CEF8D56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B65F906-B967-4867-9F69-D836CEF8D56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B65F906-B967-4867-9F69-D836CEF8D56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC34CAC0-851E-4388-8CBB-B5733A3E5A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC34CAC0-851E-4388-8CBB-B5733A3E5A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC34CAC0-851E-4388-8CBB-B5733A3E5A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC34CAC0-851E-4388-8CBB-B5733A3E5A38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -292,6 +298,7 @@ Global
 		{8E7D335B-D61C-46D9-9C8D-3A8F456B93FB} = {1BEED96F-6142-4672-BCBA-D9BBC3C91A67}
 		{8DC265D0-53B7-4399-A17E-3A6C63784120} = {5C9FE9E0-43C5-4515-835E-D61CBDE2536D}
 		{3B65F906-B967-4867-9F69-D836CEF8D56E} = {1A572E98-6E81-42E0-99E0-289E8047D4C5}
+		{BC34CAC0-851E-4388-8CBB-B5733A3E5A38} = {1A572E98-6E81-42E0-99E0-289E8047D4C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {376CFE76-F481-429F-84CD-99C3300C9926}
