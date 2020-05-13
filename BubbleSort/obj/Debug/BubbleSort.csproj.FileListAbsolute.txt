@@ -10,3 +10,4 @@ C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\bin\Debug\BubbleS
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.csprojAssemblyReference.cache
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.exe
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.pdb
+C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.csproj.CoreCompileInputs.cache

@@ -23,7 +23,7 @@ namespace TCPClient
                 byte[] msgt = new byte[BitConverter.ToInt32(sizeBytes, 0)];
                 networkStream.Read(msgt, 0, msgt.Length);
 
-                Console.WriteLine(Encoding.UTF8.GetString(msgt,0,msgt.Length);
+                Console.WriteLine(Encoding.UTF8.GetString(msgt,0,msgt.Length));
             }
         }
     }
