@@ -12,8 +12,8 @@ namespace OrderinFromClientToServer
     {
         private static TcpListener listener;
         private static int port = 10000;
-        private static NetworkStream Ns;
-        private static BinaryFormatter Bf = new BinaryFormatter(); 
+        private static NetworkStream networkStream;
+        private static BinaryFormatter binaryFormatter = new BinaryFormatter(); 
         static void Main(string[] args)
         {
             Console.WriteLine("Are you client or server?");
@@ -44,7 +44,7 @@ namespace OrderinFromClientToServer
             //-- wait for the client to connect --//
             Console.WriteLine("Server running.");
             Console.WriteLine("Waiting for client");
-            Ns = listener.AcceptTcpClient().GetStream();
+            networkStream = listener.AcceptTcpClient().GetStream();
             Console.WriteLine("Received client." + Environment.NewLine);
 
             TeslaFactory teslaFactory = new TeslaFactory();
@@ -57,11 +57,11 @@ namespace OrderinFromClientToServer
 
                 //get the size of the byte array with the car name in
                 byte[] size = new byte[4];
-                Ns.Read(size, 0, 4);
+                networkStream.Read(size, 0, 4);
 
                 //get the car name as a byte array
                 byte[] bytes = new byte[BitConverter.ToInt32(size, 0)];
-                Ns.Read(bytes, 0, bytes.Length);
+                networkStream.Read(bytes, 0, bytes.Length);
 
                 //turn byte array into a string
                 string carName = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
@@ -96,13 +96,13 @@ namespace OrderinFromClientToServer
                 //if we dont know how to build the car return an empty object
                 if (car == null)
                 {
-                    Bf.Serialize(Ns, new object());
+                    binaryFormatter.Serialize(networkStream, new object());
                 }
                 //else send the car back
                 else
                 {
                     //remember to use [Serializable] on all car classes or else Serialize won't work
-                    Bf.Serialize(Ns, car);
+                    binaryFormatter.Serialize(networkStream, car);
                 }
             }
         }
@@ -111,7 +111,7 @@ namespace OrderinFromClientToServer
         {
 
             TcpClient server = new TcpClient("localhost", port);
-            Ns = server.GetStream();
+            networkStream = server.GetStream();
             Console.WriteLine("Connected to server" + Environment.NewLine);
 
             while (true)
@@ -127,9 +127,9 @@ namespace OrderinFromClientToServer
                 byte[] bytes = Encoding.UTF8.GetBytes(carName);
 
                 //send the size of our byte array first
-                Ns.Write(BitConverter.GetBytes(bytes.Length), 0, 4);
+                networkStream.Write(BitConverter.GetBytes(bytes.Length), 0, 4);
                 //send the byte array with the car name
-                Ns.Write(bytes, 0, bytes.Length);
+                networkStream.Write(bytes, 0, bytes.Length);
 
 
                 //-- receive the car from server --//
@@ -139,7 +139,7 @@ namespace OrderinFromClientToServer
                 try
                 {
                     //remember to use [Serializable] on all car classes or else Deserialize won't work
-                    Car car = (Car)Bf.Deserialize(Ns);
+                    Car car = (Car)binaryFormatter.Deserialize(networkStream);
                     Console.Clear();
                     Console.WriteLine($"Received car from the server:");
                     Console.WriteLine(car.ToString());
