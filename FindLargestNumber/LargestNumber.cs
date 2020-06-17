@@ -39,5 +39,14 @@ namespace FindLargestNumber
             return largestNumber;
         }
 
+        public int GetAge(int age)
+        {
+            if (age < 0)
+            {
+                throw new Exception();
+            }
+            return age;
+        }
+
     }
 }
