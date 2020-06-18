@@ -4,6 +4,7 @@ using System.Text;
 
 namespace OrderGraphfromServerToClient
 {
+    [Serializable]
     public class Edge
     {
         public Node From;

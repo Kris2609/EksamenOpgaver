@@ -47,8 +47,8 @@ namespace OrderGraphfromServerToClient
             Console.WriteLine("Waiting for client");
             networkStream = listener.AcceptTcpClient().GetStream();
             Console.WriteLine("Received client." + Environment.NewLine);
-            Graph graph = new Graph();
-            ListOfDestinations(graph);
+            
+            
             while (true)
             {
                 Thread.Sleep(1000);
@@ -64,88 +64,44 @@ namespace OrderGraphfromServerToClient
                 string cityName = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
                 cityName = cityName.ToLower();
                 Console.WriteLine($"Received {cityName} from the client");
+                Graph graph = new Graph();
                 if (cityName == "list")
                 {
-                    Node Frederikshavn = new Node("Frederikshavn");
-                    Node Aalborg = new Node("Aalborg");
-                    Node Århus = new Node("Århus");
-                    Node Fredericia = new Node("Fredericia");
-                    Node Odde = new Node("Sj. Odde");
-                    Node Odense = new Node("Odense");
-                    Node København = new Node("København");
-                    Node Rønne = new Node("Rønne");
-
-
-                    Aalborg.AddEdge(Århus, 118);
-                    Aalborg.AddEdge(København, 222);
-                    Århus.AddEdge(Fredericia, 93);
-                    Århus.AddEdge(Odde, 72);
-                    Fredericia.AddEdge(Odense, 54);
-                    Odense.AddEdge(København, 162);
-                    Odde.AddEdge(København, 108);
-                    København.AddEdge(Rønne, 150);
-
-                    graph.AddNode(Frederikshavn);
-
-                    graph.AddNode(Århus);
-                    graph.AddNode(Fredericia);
-                    graph.AddNode(Odde);
-                    graph.AddNode(Odense);
-                    graph.AddNode(København);
-                    graph.AddNode(Rønne);
-
-                    Console.WriteLine(graph.ToString());
-
-                    Console.Read();
+                    graph = graph.Destinations(graph);
+                    Console.WriteLine($"{cityName}");
                 }
+                else
+                {
+                    Console.WriteLine("Please try again with the word list");
+                }
+                if (graph == null)
+                {
+                    binaryFormatter.Serialize(networkStream, new object());
+                }
+                //else send the car back
+                else
+                {
+                    //remember to use [Serializable] on all car classes or else Serialize won't work
+                    binaryFormatter.Serialize(networkStream, graph);
+                }
+
             }
         }
 
-        private static void ListOfDestinations(Graph graph)
-        {
-            Node Frederikshavn = new Node("Frederikshavn");
-            Node Aalborg = new Node("Aalborg");
-            Node Århus = new Node("Århus");
-            Node Fredericia = new Node("Fredericia");
-            Node Odde = new Node("Sj. Odde");
-            Node Odense = new Node("Odense");
-            Node København = new Node("København");
-            Node Rønne = new Node("Rønne");
-
-
-            Aalborg.AddEdge(Århus, 118);
-            Aalborg.AddEdge(København, 222);
-            Århus.AddEdge(Fredericia, 93);
-            Århus.AddEdge(Odde, 72);
-            Fredericia.AddEdge(Odense, 54);
-            Odense.AddEdge(København, 162);
-            Odde.AddEdge(København, 108);
-            København.AddEdge(Rønne, 150);
-
-            graph.AddNode(Frederikshavn);
-
-            graph.AddNode(Århus);
-            graph.AddNode(Fredericia);
-            graph.AddNode(Odde);
-            graph.AddNode(Odense);
-            graph.AddNode(København);
-            graph.AddNode(Rønne);
-
-            Console.WriteLine(graph.ToString());
-
-            Console.Read();
-        }
+        
 
         public static void Client()
         {
             TcpClient server = new TcpClient("localhost", port);
             networkStream = server.GetStream();
             Console.WriteLine("Connected to server" + Environment.NewLine);
+            
             while (true)
             {
                 //-- get a car name from the user --//
                 Console.WriteLine("enter list to see all destinations");
                 string cityName = Console.ReadLine();
+                
 
                 //-- send car name to server --//
 
@@ -158,14 +114,28 @@ namespace OrderGraphfromServerToClient
                 //send the byte array with the car name
                 networkStream.Write(bytes, 0, bytes.Length);
 
-
+               
                 //-- receive the car from server --//
 
                 //we use a try-catch so if we receive something else then a car the binaryformatter will
                 //throw an exception and we can then write in the console that want we got was not a car
-                
+
+                try
+                {
+                    //remember to use [Serializable] on all car classes or else Deserialize won't work
+                    Graph graph = (Graph)binaryFormatter.Deserialize(networkStream);
+                    Console.Clear();
+                    Console.WriteLine($"Received info from the server:");
+                    Console.WriteLine(graph.ToString());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine($"The server couldn´t understand your request");
+                }
+
             }
 
         }
+        
     }
 }

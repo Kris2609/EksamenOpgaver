@@ -7,7 +7,6 @@ C:\Users\Kristoffer\Desktop\OpgaverTilReEksamen2020\OpgaverTilEksamen\BubbleSort
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\bin\Debug\BubbleSort.exe.config
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\bin\Debug\BubbleSort.exe
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\bin\Debug\BubbleSort.pdb
-C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.csprojAssemblyReference.cache
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.exe
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.pdb
 C:\Users\stoff\source\repos\Kris2609\EksamenOpgaver\BubbleSort\obj\Debug\BubbleSort.csproj.CoreCompileInputs.cache
